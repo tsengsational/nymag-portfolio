@@ -1,6 +1,11 @@
+// Copyright (C) New York Media, LLC
+// Unauthorized copying of this file, via any medium is strictly prohibited
+// Proprietary and confidential
+// Written by Jason Tseng <jason.tseng@nymag.com>, 2018
+
 @import '../styleguide/theme';
 
-.cut-newsletter-sign-up {
+.cut-homepage-newsletter-sign-up {
 
   .input {
     border: solid 1px $dark-gray;
@@ -20,35 +25,23 @@
     color: $dark-gray;
   }
 
-  .promo {
-    color: $black-110;
-    font-family: $sans-serif-stack;
-    margin: 0 auto 15px;
-
-    @include min('homeLarge') {
-      width: 66%;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    strong {
-      font-weight: 600;
-    }
-
-  }
-
   .submit {
     background-color: $black-100;
     border-radius: 3px;
     color: $black-0;
-    font: 12px/10.7px $header-stack-bold;
-    letter-spacing: 3px;
-    padding: 13px 14px 14px;
+    font-family: $header-stack-bold;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    padding: 13px 8px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include min('homeMedium') {
+      padding: 10px 8px;
+    }
 
     &:hover,
     &:focus {
@@ -57,16 +50,9 @@
     }
   }
 
-  .title {
+  .newsletter-title {
     color: $black-90;
     font-family: $header-stack;
-    line-height: 29px;
-    margin: 0 25px 15px;
-
-    @include min('homeMedium') {
-      margin: 0 auto 15px;
-      width: 80%;
-    }
 
     strong {
       font-family: $header-stack-medium;
@@ -80,7 +66,7 @@
 }
 
 .homepage-section.design-hunting-section {
-  .cut-newsletter-sign-up .title {
+  .cut-homepage-newsletter-sign-up .title {
     font-family: $design-hunting-stack;
 
     em {

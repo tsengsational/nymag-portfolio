@@ -1,3 +1,8 @@
+# Copyright (C) New York Media, LLC
+# Unauthorized copying of this file, via any medium is strictly prohibited
+# Proprietary and confidential
+# Written by Jason Tseng <jason.tseng@nymag.com>, 2018
+
 _description: |
   Represents a newsletter sign up form appearing in the latest news feed. The component is hidden depending on the number of user logins.
 

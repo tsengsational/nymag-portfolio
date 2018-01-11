@@ -1,3 +1,8 @@
+# Copyright (C) New York Media, LLC
+# Unauthorized copying of this file, via any medium is strictly prohibited
+# Proprietary and confidential
+# Written by Jason Tseng <jason.tseng@nymag.com>, 2018
+
 _description: |
   The header for The Cut. This is component is not meant to be editable by
   users. Use the bootstrap files to add data for this component.

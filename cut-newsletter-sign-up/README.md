@@ -1,3 +1,8 @@
+<!-- Copyright (C) New York Media, LLC
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+Written by Jason Tseng <jason.tseng@nymag.com>, 2018  -->
+
 # cut-newsletter-sign-up
 A component for [Clay](https://github.com/nymag/amphora/wiki#clay-is-divided-into-components).
 
