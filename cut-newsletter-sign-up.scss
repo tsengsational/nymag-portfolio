@@ -1,0 +1,91 @@
+@import '../styleguide/theme';
+
+.cut-newsletter-sign-up {
+
+  .input {
+    border: solid 1px $dark-gray;
+    color: $black-45;
+    font-family: $sans-serif-stack;
+  }
+
+  .message {
+    font-family: $sans-serif-stack;
+  }
+
+  .message.error {
+    color: $red;
+  }
+
+  .message.success {
+    color: $dark-gray;
+  }
+
+  .promo {
+    color: $black-110;
+    font-family: $sans-serif-stack;
+    margin: 0 auto 15px;
+
+    @include min('homeLarge') {
+      width: 66%;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+  }
+
+  .submit {
+    background-color: $black-100;
+    border-radius: 3px;
+    color: $black-0;
+    font: 12px/10.7px $header-stack-bold;
+    letter-spacing: 3px;
+    padding: 13px 14px 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+
+    }
+  }
+
+  .title {
+    color: $black-90;
+    font-family: $header-stack;
+    line-height: 29px;
+    margin: 0 25px 15px;
+
+    @include min('homeMedium') {
+      margin: 0 auto 15px;
+      width: 80%;
+    }
+
+    strong {
+      font-family: $header-stack-medium;
+    }
+
+    em {
+      font-family: $header-stack-italic;
+    }
+  }
+
+}
+
+.homepage-section.design-hunting-section {
+  .cut-newsletter-sign-up .title {
+    font-family: $design-hunting-stack;
+
+    em {
+      font-family: $design-hunting-stack;
+      font-style: italic;
+    }
+  }
+}

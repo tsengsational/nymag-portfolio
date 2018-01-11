@@ -1,0 +1,94 @@
+@import '../styleguide/theme';
+
+.cut-header {
+  background: $white;
+
+  .cut-search-top {
+    background-color: $white;
+  }
+
+  .logo {
+    color: $black;
+  }
+
+  .menu-btn:before {
+    border: 1px solid $white;
+  }
+
+  .menu-btn:hover:before,
+  .menu-btn:focus:before {
+    border-color: $black-91;
+  }
+
+  .nav .cut-search-top:after {
+    background-color: $white;
+    box-shadow: 0 12px 15px $black-0;
+    
+  }
+
+  .nav .nav-list-heading,
+  .nav .nav-list-heading a {
+    color: $black-91;
+    font-family: $sans-serif-stack;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: 17px;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .nav .nav-list-heading {
+    background: $white;
+  }
+
+  .nav .nav-list-heading a,
+  .nav .nav-categories .nav-list-heading {
+    &:hover,
+    &:focus {
+      @include underline($black-91, $white, 1px, 1px);
+    }
+  }
+
+  .nav .nav-list-item a {
+    color: $black-91;
+    font-family: $sans-serif-stack;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      @include underline($black-91, $white, 1px, 1px);
+    }
+  }
+
+  .right.is-active .nav {
+    background-color: $white;
+    @include min(homeMedium) {
+      border-bottom: 1px solid $black-91;
+    };
+  }
+
+  .sites-links .site-link a {
+    color: $black-91;
+    font-family: $sans-serif-stack;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &.has-section-header .left {
+    border-bottom: 1px solid $black-12;
+    margin: 0 15px;
+
+    @include min(homeMedium) {
+      border-bottom: none;
+      margin: 0;
+    }
+  }
+}

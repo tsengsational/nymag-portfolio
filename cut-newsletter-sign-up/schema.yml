@@ -1,0 +1,72 @@
+_description: |
+  The newsletter signup component where the user can sign up within the page.
+
+title:
+  _display: inline
+  _has:
+    -
+      fn: wysiwyg
+      styled: false
+      buttons:
+        - bold
+        - italic
+  _placeholder:
+    height: 20px
+    text: Title
+
+promo:
+  _display: inline
+  _has:
+    -
+      fn: wysiwyg
+      styled: false
+      buttons:
+        - bold
+  _placeholder:
+    height: 20px
+    text: Promo
+
+emailMessage:
+  _display: settings
+  _label: Email Message
+  _has:
+    - text
+    - label
+
+signUpMessage:
+  _display: settings
+  _label: Sign Up Message
+  _has:
+    - text
+    - label
+
+successMessage:
+  _display: settings
+  _label: Success Message
+  _has:
+    - text
+    - label
+
+errorMessage:
+  _display: settings
+  _label: Error Message
+  _has:
+    - text
+    - label
+
+newsletterId:
+  _display: settings
+  _label: Newsletter Id
+  _has:
+    - text
+    - label
+    -
+      fn: description
+      value: This will be different for every newsletter.
+
+source:
+  _display: settings
+  _label: Source
+  _has:
+    - text
+    - label

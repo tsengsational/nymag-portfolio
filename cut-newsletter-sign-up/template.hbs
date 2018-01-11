@@ -1,0 +1,17 @@
+<section data-uri="{{ default _ref _self }}" class="cut-newsletter-sign-up" data-track-id="{{ source }}" data-track-type="cut-newsletter-signup">
+  <div data-editable="title" class="title">{{{ title }}}</div>
+  <div data-editable="promo" class="promo">{{{ promo }}}</div>
+  <div class="form-center">
+    <form method="get" class="form" action="/newsletter/users/" >
+      <input type="hidden" value="{{ newsletterId }}" name="newsletterId" class="input newsletterID">
+      <input type="hidden" value="{{ source }}" name="source" class="input" />
+      <label for="newsletterEmail" class="label-email">Email</label>
+      <input id="newsletterEmail" class="input email" type="email" placeholder="{{ emailMessage }}" name="email" required>
+      <input type="submit" class="input submit" value="{{ signUpMessage }}" />
+      <div class="messages">
+        <span class="message success" role="alert" aria-live="assertive" aria-hidden="true" tabindex="-1">{{ successMessage }}</span>
+        <span class="message error" role="alert" aria-live="assertive" aria-hidden="true" tabindex="-1">{{ errorMessage }}</span>
+      </div>
+    </form>
+  </div>
+</section>

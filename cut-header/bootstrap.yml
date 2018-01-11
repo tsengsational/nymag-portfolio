@@ -1,0 +1,15 @@
+components:
+  cut-header:
+    hasStrongSiteName: false
+    collapseSpace: false
+    breakpoints: homepage
+    services:
+      -
+        _ref: /components/follow/instances/facebook
+      -
+        _ref: /components/follow/instances/twitter
+      -
+        _ref: /components/follow/instances/instagram
+    search:
+      -
+        _ref: /components/search/instances/global

@@ -1,0 +1,110 @@
+@import '../../global/mixins';
+
+.cut-newsletter-sign-up {
+  // add your styles here!
+  border-style: solid none;
+  border-width: 1px;
+  margin: 0 20px 50px;
+  padding: 26px 0 21px;
+
+  @include min('homeMedium') {
+    margin: 0 0 50px;
+  }
+
+  .email {
+    width: 193px;
+
+    @include min('homeMedium') {
+      width: 286px;
+    }
+  }
+
+  .form-center {
+    display: flex;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    @include min('homeMedium') {
+      margin: auto;
+      width: 80%;
+    }
+  }
+
+  .input {
+    appearance: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    height: 40px;
+    padding: 14px;
+
+    @include min('homeMedium') {
+      height: 36px;
+    }
+  }
+
+  .label-email {
+    @include hidden-content()
+  }
+
+  .message {
+    display: none;
+    font-size: 13px;
+    opacity: 0;
+    outline: 0;
+    text-align: center;
+    transition: opacity .5s;
+    width: 100%;
+  }
+
+  .messages {
+    flex: 1 1 100%;
+    height: 20px;
+    padding: 5px 0 0;
+  }
+
+  .promo {
+    font-size: 13px;
+    line-height: 1.15;
+    margin: 0 0 26px;
+    text-align: center;
+  }
+
+  .submit {
+    cursor: pointer;
+    height: 41px;
+    margin: 0 0 0 6px;
+
+    @include min('homeMedium') {
+      height: 36px;
+      width: 97px;
+    }
+  }
+
+
+  .title {
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+  &.success .message.success,
+  &.error .message.error {
+    display: block;
+    opacity: 1;
+  }
+
+  @media print {
+    // components are hidden by default when printing
+    // to add print styles, remove the rule below
+    display: none;
+  }
+}

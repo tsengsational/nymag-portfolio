@@ -1,0 +1,109 @@
+@import '../../global/mixins';
+
+.cut-homepage-newsletter-sign-up {
+  position: relative;
+  transition: opacity .5s, transform .5s;
+
+  .email {
+    margin: 0 5px 0 0;
+    width: 220px;
+
+    @include min('homeMedium') {
+      width: 136px;
+    }
+  }
+
+  .form {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .input {
+    appearance: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    height: 39px;
+    padding: 14px;
+
+    @include min('homeMedium') {
+      height: 31px;
+    }
+  }
+
+  .label-email {
+    @include hidden-content()
+  }
+
+  .message {
+    display: none;
+    font-size: 13px;
+    opacity: 0;
+    outline: 0;
+    text-align: center;
+    transition: opacity .5s;
+    width: 100%;
+
+    @include min('homeMedium') {
+      text-align: left;
+    }
+  }
+
+  .messages {
+    flex: 1 1 100%;
+    height: 10px;
+    padding: 5px 0 0;
+
+    @include min('homeMedium') {
+      padding: 1px 0;
+    }
+  }
+
+  .newsletter-title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    text-align: left;
+
+  }
+
+  .promo {
+    font-size: 13px;
+    line-height: 1.15;
+    margin: 0 0 26px;
+    text-align: center;
+  }
+
+  .submit {
+    cursor: pointer;
+    height: 39px;
+    width: 65px;
+
+    @include min('homeMedium') {
+      height: 31px;
+    }
+  }
+
+  &.hiding {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  &.success .message.success,
+  &.error .message.error {
+    display: block;
+    opacity: 1;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  @media print {
+    // components are hidden by default when printing
+    // to add print styles, remove the rule below
+    display: none;
+  }
+}

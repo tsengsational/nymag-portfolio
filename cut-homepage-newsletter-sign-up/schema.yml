@@ -1,0 +1,60 @@
+_description: |
+  Represents a newsletter sign up form appearing in the latest news feed. The component is hidden depending on the number of user logins.
+
+newsletter-title:
+  _display: inline
+  _has:
+    -
+        fn: wysiwyg
+        styled: false
+        buttons:
+          - bold
+          - italic
+  _placeholder:
+    height: 20px
+    text: Title
+
+emailMessage:
+  _display: settings
+  _label: Email Message
+  _has:
+    - text
+    - label
+
+signUpMessage:
+  _display: settings
+  _label: Sign Up Message
+  _has:
+    - text
+    - label
+
+successMessage:
+  _display: settings
+  _label: Success Message
+  _has:
+    - text
+    - label
+
+errorMessage:
+  _display: settings
+  _label: Error Message
+  _has:
+    - text
+    - label
+
+newsletterId:
+  _display: settings
+  _label: Newsletter Id
+  _has:
+    - text
+    - label
+    -
+      fn: description
+      value: This will be different for every newsletter.
+
+source:
+  _display: settings
+  _label: Source
+  _has:
+    - text
+    - label

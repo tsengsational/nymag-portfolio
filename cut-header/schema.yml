@@ -1,0 +1,60 @@
+_description: |
+  The header for The Cut. This is component is not meant to be editable by
+  users. Use the bootstrap files to add data for this component.
+
+  Properties of this component include:
+  - services: which social media icons show up in the header
+  - search: reference to sitewide search
+
+hasStrongSiteName:
+  _label: H1 Toggle
+  _display: settings
+  _has:
+    -
+      fn: checkbox
+      label: Site title is the &lt;h1&gt; page title
+    - label
+    -
+      fn: description
+      value: According to SEO and accessibility experts, an &lt;h1&gt; tag should only appear once on a page. On pages with important content (like articles), the article component will handle it. On other pages (like homepages), this should be enabled so that the Cut Header can handle it.
+
+collapseSpace:
+  _label: Use the collapsed styling for the header, which has a smaller logo and shorter footprint
+  _display: settings
+  _has:
+    -
+      fn: checkbox
+      label: Should be checked if this instance shows up on article pages or section pages (for different styles)
+    - label
+
+useSvgHeader:
+  _label: Replace the four links in the nav with an svg title of the page, used on section pages
+  _display: settings
+  _has:
+    -
+      fn: checkbox
+    - label
+
+hideTopLinks:
+  _label: Hide four links in the nav all together
+  _display: settings
+  _has:
+    -
+      fn: checkbox
+    - label
+
+breakpoints:
+  _label: Viewport Breakpoints
+  _display: settings
+  _has:
+    -
+      fn: radio
+      options:
+        - homepage
+        - article
+    - label
+    -
+      fn: description
+      value: Select Homepage to use new 768px/1180px breakpoints, select article to use the legacy 600px/1024px breakpoints.
+
+search: {}

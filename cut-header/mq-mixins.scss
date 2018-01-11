@@ -1,0 +1,357 @@
+$black-12: #ddd;
+$black-91: #221f20;
+
+@mixin medium-styles() {
+  .menu-btn {
+    margin: 0;
+  }
+
+  .left {
+    flex-basis: 100%;
+    padding: 70px 0 55px;
+
+    .menu-btn {
+      display: none;
+    }
+
+    &.menu-open {
+      display: block;
+    }
+  }
+
+  .logo > svg {
+    height: auto;
+    width: 270px;
+  }
+
+  .nav {
+    border-top: 1px solid $black-12;
+    display: flex;
+    margin: auto;
+    width: 100%;
+
+    &>.menu-btn {
+      display: block;
+    }
+
+    .menu-btn {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-categories {
+      padding: 23px 0;
+    }
+
+    .nav-category {
+      padding-right: 15px;
+    }
+
+    .nav-section-container {
+      border-right: $nav-item-border;
+      flex: 1 100%;
+      padding-bottom: 0;
+      padding-left: 34px;
+      padding-top: 7px;
+
+
+      &:last-of-type {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    .nav-section {
+      padding-top: 0;
+    }
+
+    .nav-section:nth-of-type(2) {
+      border-right: $nav-item-border;
+    }
+
+    .nav-section:nth-of-type(3) {
+      padding-left: 0;
+    }
+
+    .more-list {
+      border-top: $nav-item-border;
+      margin-top: 20px;
+      padding-top: 10px;
+
+      .nav-list-heading {
+        @include hidden-content();
+      }
+    }
+
+    .nav-bottom {
+      border-top: $nav-item-border;
+      margin-top: 20px;
+    }
+
+    .cut-search {
+      display: block;
+      margin-right: 40px;
+      width: 270px;
+    }
+
+    .cut-search-top {
+      display: none;
+    }
+
+    .sites-links {
+      flex-wrap: nowrap;
+      padding-top: 22px;
+    }
+
+    .site-link {
+      flex: 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .right {
+    height: 70px;
+    margin: 0 15px;
+  }
+
+  .right.is-active {
+    height: 70px;
+    margin: 0;
+  }
+
+  .right.is-active .nav {
+    border-top: 1px solid $black-91;
+    padding: 20px 34px 30px;
+
+    .nav-section {
+      flex-direction: row;
+    }
+
+    .menu-btn {
+      right: 10px;
+      top: 34px;
+    }
+
+
+  }
+
+  &.collapse-space {
+    .left {
+      padding: 60px 32px 40px 0;
+    }
+
+    .logo svg {
+      height: 100%;
+      width: 234px;
+    }
+
+    .nav {
+      border-bottom: $nav-item-border;
+
+      &.no-bottom-border {
+        border-bottom: none;
+        height: 55px;
+
+        .menu-btn {
+          top: 35px;
+        }
+      }
+    }
+
+    .right.is-active .nav.no-bottom-border {
+      border-bottom: 1px solid $black-91;
+      height: auto;
+    }
+  }
+
+  &.has-section-header {
+
+    .nav {
+      border-bottom: none;
+    }
+
+    .section-page-heading {
+      display: flex;
+      padding: 24px 0 22px;
+
+      svg {
+        height: 25px;
+      }
+    }
+
+    .right {
+      height: 55px;
+    }
+  }
+}
+
+@mixin large-styles() {
+  flex-wrap: nowrap;
+  margin: auto;
+  width: 1080px;
+
+
+  .menu-btn:before {
+    background-size: 22px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .left {
+    border-bottom: none;
+    margin-right: auto;
+    padding: 70px 0 80px;
+    text-align: left;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .nav {
+    border-top: none;
+    justify-content: flex-end;
+    margin: 0 0 5px;
+    width: auto;
+
+    .menu-btn {
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+    }
+
+    .nav-categories {
+      padding: 0;
+    }
+
+    .search-social {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .sites-links {
+      display: none;
+    }
+
+  }
+
+  .right {
+    height: auto;
+    margin: 0;
+  }
+
+  .right.is-active {
+    height: 74px;
+  }
+
+  .right.is-active .nav {
+    border: 1px solid $black-91;
+    padding-right: 34px;
+    right: -13px;
+    width: 768px;
+
+    .menu-btn {
+      padding: 10px;
+      top: 16px;
+    }
+  }
+
+  &.collapse-space {
+    padding-bottom: 8px;
+
+    .logo > svg {
+      height: 47.27px;
+      width: 200px;
+    }
+
+    .left {
+      padding: 32px 0 32px 28px;
+    }
+
+    .nav {
+      border-bottom: none;
+      padding-right: 24px;
+    }
+
+    .right.is-active {
+      height: 70px;
+    }
+
+    .right.is-active .nav {
+      right: 10px;
+    }
+
+    .right:not(.is-active) .nav.no-bottom-border .menu-btn {
+      top: auto;
+    }
+
+    .right.is-active .nav.no-bottom-border {
+      border-bottom: 1px solid $black-91;
+    }
+  }
+
+  &.has-section-header {
+    width: 940px;
+
+    .left {
+      padding-left: 0;
+    }
+
+    .menu-btn:before {
+      background-size: 32px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .nav {
+      justify-content: flex-end;
+      margin-bottom: 0;
+      margin-right: -2px;
+      padding-right: 0;
+    }
+
+    .section-page-heading {
+      padding: 0;
+    }
+
+    .section-page-heading svg {
+      margin-right: 32px;
+      width: auto;
+
+      &[height='37'] {
+        height: 36px;
+      }
+
+      // the longer SVG headers ('sex & relationships', etc.) need to be less in height than the shorter ones ('style', etc)
+      // the long SVGs have a different height property set that we use to set the actual height of the SVG here
+
+      &[height='28'] {
+        height: 28px;
+      }
+    }
+
+    .right:not(.is-active) {
+      height: auto;
+    }
+
+    .right.is-active .nav {
+      right: -9px;
+    }
+
+    &.collapse-space {
+      padding-bottom: 20px;
+    }
+  }
+
+  &.article-breakpoints {
+    width: 100%;
+
+    .nav {
+      margin: 0;
+    }
+  }
+}

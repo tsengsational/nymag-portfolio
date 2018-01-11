@@ -1,0 +1,199 @@
+<div data-uri="{{ default _ref _self }}" class="cut-header {{breakpoints}}-breakpoints{{ if ./collapseSpace ' collapse-space' }}{{#ifAny ./useSvgHeader ./hideTopLinks}} has-section-header{{/ifAny}}">
+  <div class="left ">
+    <a class="logo " href="/">
+      {{#if hasStrongSiteName}}
+        <h1 class="site-name ">{{ @root.locals.site.name }}</h1>
+      {{else}}
+        <span class="site-name ">{{ @root.locals.site.name }}</span>
+      {{/if}}
+      {{{ read 'public/media/components/cut-header/cut-logo.svg' }}}
+    </a>
+    <button class="menu-btn mobile" aria-label="Toggle menu" aria-controls="expanded-nav" aria-expanded="false">
+      <span class="button-text ">Toggle Menu</span>
+    </button>
+  </div>
+
+  <div class="right">
+    <nav class="nav{{if ./hideTopLinks ' no-bottom-border'}}">
+      {{#ifAll ./useSvgHeader ./sectionKey}}
+        <div class="section-page-heading ">
+          {{{ read (concat 'public/media/components/cut-header/' sectionKey '.svg') }}}
+        </div>
+      {{else}}
+        {{#unless ./hideTopLinks}}
+        <ul class="nav-categories">
+          <li class="nav-category">
+            <a class="nav-list-heading" href="/style/" data-section="style">Style</a>
+          </li>
+          <li class="nav-category">
+            <a class="nav-list-heading" href="/self/" data-section="self">Self</a>
+          </li>
+          <li class="nav-category">
+            <a class="nav-list-heading" href="/culture/" data-section="culture">Culture</a>
+          </li>
+          <li class="nav-category">
+            <a class="nav-list-heading" href="/power/" data-section="power">Power</a>
+          </li>
+        </ul>
+        {{else}}
+          <div class="nav-categories"></div>
+          {{/unless}}
+      {{/ifAll}}
+      <div class="nav-sections" tabindex="-1" id="expanded-nav">
+        <div class="cut-search-top">
+          {{> search ./search }}
+          <button class="menu-btn" aria-label="Toggle menu" aria-controls="expanded-nav" aria-expanded="false">
+            <span class="button-text">Toggle Menu</span>
+          </button>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-container">
+            <h2 class="nav-list-heading" id="style">
+              <a href="/style/">Style</a>
+            </h2>
+            <ul class="nav-list">
+              <li class=" nav-list-item">
+                <a href="/fashion/">Fashion</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/beauty/">Beauty</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/shopping/">Shopping</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/home-design/">Design Hunting</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/weddings/"><i>New York</i> Weddings</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/red-carpet/">Parties & Red Carpet</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/runway/">Fashion Shows</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/author/Cathy%20Horyn/">Cathy Horyn</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-section-container">
+            <h2 class="nav-list-heading">
+              <a href="/self/" id="self">Self</a>
+            </h2>
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a href="/health/">Health & Wellness</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/motherhood/">Motherhood</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/advice/">Advice</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/relationships/">Sex & Relationships</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/scienceofus/">Science of Us</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/tags/madame%20clairevoyant/">Horoscopes</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/tags/ask%20polly/">Ask Polly</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-container">
+            <h2 class="nav-list-heading"><a href="/culture/" id="culture">Culture</a></h2>
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a href="/books/">Books</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/tv/">Television</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/movies/">Movies</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/music/">Music</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/celebrity/">Celebrity</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-section-container">
+            <h2 class="nav-list-heading"><a href="/power/" id="power">Power</a></h2>
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a href="/politics/">Politics</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/work/">Work</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/money/">Money</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="/author/Rebecca%20Traister/">Rebecca Traister</a>
+              </li>
+            </ul>
+            <div class="more-list">
+              <h2 class="nav-list-heading">More</h2>
+              <ul class="nav-list">
+                <li class="nav-list-item">
+                  <a href="/latest/">Latest Stories</a>
+                </li>
+                <li class="nav-list-item">
+                  <a href="/video/">Video</a>
+                </li>
+                <li class="nav-list-item">
+                  <a href="/aboutus.html">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-bottom">
+          <div class="search-social">
+            <div class="cut-search">
+              {{> search ./search }}
+            </div>
+            <div class="social">
+              {{> component-list services }}
+            </div>
+          </div>
+          <ul class="sites-links">
+            <li class="site-link">
+              <a href="http://nymag.com">nymag.com</a>
+            </li>
+            <li class="site-link">
+              <a href="http://nymag.com/daily/intelligencer/">Daily Intelligencer</a>
+            </li>
+            <li class="site-link">
+              <a href="http://www.vulture.com/">Vulture</a>
+            </li>
+            <li class="site-link">
+              <a href="http://nymag.com/selectall/">Select All</a>
+            </li>
+            <li class="site-link">
+              <a href="http://www.grubstreet.com/">Grub Street</a>
+            </li>
+            <li class="site-link">
+              <a href="http://nymag.com/strategist/">The Strategist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="menu-btn" aria-label="Toggle menu" aria-controls="expanded-nav" aria-expanded="false">
+        <span class="button-text">Toggle Menu</span>
+      </button>
+    </nav>
+  </div>
+</div>

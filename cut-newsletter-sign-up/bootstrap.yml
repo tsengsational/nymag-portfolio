@@ -1,0 +1,10 @@
+components:
+  cut-newsletter-sign-up:
+    title: Get the Newsletter
+    emailMessage: Enter your email
+    signUpMessage: Sign Up
+    successMessage: Thank you for signing up!
+    errorMessage: An error occurred. Please try again.
+    # add your default values here
+    # they will be cloned into new component instances
+    # whenever you POST to /components/cut-newsletter-sign-up/instances

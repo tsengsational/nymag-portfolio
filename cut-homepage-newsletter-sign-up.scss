@@ -1,0 +1,72 @@
+@import '../styleguide/theme';
+
+.cut-homepage-newsletter-sign-up {
+
+  .input {
+    border: solid 1px $dark-gray;
+    color: $black-45;
+    font-family: $sans-serif-stack;
+  }
+
+  .message {
+    font-family: $sans-serif-stack;
+  }
+
+  .message.error {
+    color: $red;
+  }
+
+  .message.success {
+    color: $dark-gray;
+  }
+
+  .submit {
+    background-color: $black-100;
+    border-radius: 3px;
+    color: $black-0;
+    font-family: $header-stack-bold;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    padding: 13px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include min('homeMedium') {
+      padding: 10px 8px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+
+    }
+  }
+
+  .newsletter-title {
+    color: $black-90;
+    font-family: $header-stack;
+
+    strong {
+      font-family: $header-stack-medium;
+    }
+
+    em {
+      font-family: $header-stack-italic;
+    }
+  }
+
+}
+
+.homepage-section.design-hunting-section {
+  .cut-homepage-newsletter-sign-up .title {
+    font-family: $design-hunting-stack;
+
+    em {
+      font-family: $design-hunting-stack;
+      font-style: italic;
+    }
+  }
+}
